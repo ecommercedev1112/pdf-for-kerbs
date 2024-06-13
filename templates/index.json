@@ -1,0 +1,574 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "1482141870755-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/custom_resized_5e6fdb3a-ca36-42ec-b14d-95c262836495_1950x_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "shopify:\/\/collections\/plattor",
+            "subheading": "Stilrent och modernt",
+            "title": "Plattor",
+            "title_size": 100,
+            "heading_h1": false,
+            "text": "<p>För alla ändamål<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "1499426736627": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-anders-kristensen-13975_1512x_1_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "https:\/\/stengrossen.se\/collections\/granithallar",
+            "subheading": "Vackert, estetiskt & prisvärt",
+            "title": "Granithällar",
+            "title_size": 100,
+            "heading_h1": false,
+            "text": "<p>Granithällar från 499 kr\/kvm<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "image_HVaUyX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/stentrappaa_2700x_1_1512x_1_1_1_efe8b46d-7e56-4b72-8333-a074b4fa949b.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "shopify:\/\/collections\/trappor",
+            "subheading": "Hållbart & Ekonomiskt",
+            "title": "Trappor",
+            "title_size": 100,
+            "heading_h1": false,
+            "text": "<p>Trappor i granit<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "image_WzrhXG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dekorsten-Sjosten-SvartVit-MB13-forminskad_1728x_1_598bf6b4-7af2-450a-b3b3-cb9f42b1ead3_1_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "https:\/\/stengrossen.se\/collections\/dekorsten",
+            "subheading": "Smycka din trädgård",
+            "title": "Dekorsten",
+            "title_size": 60,
+            "heading_h1": false,
+            "text": "<p>Stort utbud av olika stensorter, färger och storlekar<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "image_mADgeH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/No_401_1_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "https:\/\/stengrossen.se\/collections\/stolpar",
+            "subheading": "Rama in din trädgård med granitstolpar",
+            "title": "Stolpar",
+            "title_size": 60,
+            "heading_h1": false,
+            "text": "<p>Olika storlekar och bearbetning<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "image_CcF68Q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brilliant-Naturgra-MB-37_1512x_1_1_1_1_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "https:\/\/stengrossen.se\/collections\/murar",
+            "subheading": "Terrassera i din trädgård",
+            "title": "Murar",
+            "title_size": 60,
+            "heading_h1": false,
+            "text": "<p>Granit- & Betongmurar<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        },
+        "image_RNGRMC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/70436327992__002_-forminskad_-_2_2100x_d31c5724-906c-4870-b3eb-d867a5e9208e_1_1.webp",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "https:\/\/stengrossen.se\/collections\/gatsten",
+            "subheading": "Klassiskt",
+            "title": "Gatsten",
+            "title_size": 60,
+            "heading_h1": false,
+            "text": "<p>Små- och Storgatsten<\/p>",
+            "enlarge_text": true,
+            "button_label": "Handla nu",
+            "overlay_position": "position--hcenter position--vcenter"
+          }
+        }
+      },
+      "block_order": [
+        "1482141870755-0",
+        "1499426736627",
+        "image_HVaUyX",
+        "image_WzrhXG",
+        "image_mADgeH",
+        "image_CcF68Q",
+        "image_RNGRMC"
+      ],
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 800,
+        "height_mobile": 500,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style_tint": true,
+        "slide_transition": "slide",
+        "slide_navigation": "dots",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "featured_collection_a8NFq9": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "campaign": true,
+        "campaign_logo_1": "shopify:\/\/shop_images\/shutterstock_2335413127_1_-_REA-bild_-_TinyPNG.jpg",
+        "campaign_text": "Vårkampanj",
+        "campaign_logo_2": "shopify:\/\/shop_images\/shutterstock_2335413127_1_-_REA-bild_-_TinyPNG.jpg",
+        "campaign_link": "shopify:\/\/collections\/campaign",
+        "campaign_color_1": "#e35359",
+        "title": "Vårkampanj",
+        "collection": "campaign",
+        "layout": "carousel",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true,
+        "show_alternative_pricing": true,
+        "show_alternative_pricing_over_price": true
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Låt oss hjälpa er att förverkliga er dröm",
+        "title": "Sten till din perfekta utomhusmiljö!",
+        "title_size": 48,
+        "heading_h1": false,
+        "text": "<p>Vi erbjuder allt Ni behöver i sten för att förverkliga Era visioner. Vi säljer natursten såsom granit och skiffer. Vi har också betongsten för alla ändamål. Hos Stengrossen hittar Ni allt Ni behöver för att skapa en perfekt uteplats, trädgård eller gångväg. Har Ni några speciella önskemål så kontakta oss omgående.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": true,
+        "full_width": false,
+        "no_padding_bottom": true,
+        "color_scheme": "standard",
+        "color_bg": "#c4d5a9",
+        "color_text": "#ffffff"
+      }
+    },
+    "9d2761dd-28f9-4c8d-acfa-40d0b1c9e3b1": {
+      "type": "featured-collection",
+      "settings": {
+        "campaign": false,
+        "campaign_text": "Spring Campaign",
+        "campaign_link": "",
+        "campaign_color_1": "#e35359",
+        "title": "",
+        "collection": "kampanj",
+        "layout": "carousel",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 1,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": false,
+        "show_alternative_pricing": true,
+        "show_alternative_pricing_over_price": false
+      }
+    },
+    "619afd01-b951-4ed7-86a2-af1f715b0067": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Utan mellanhänder är det möjligt",
+        "title": "Sveriges bästa priser på granitsten",
+        "title_size": 48,
+        "heading_h1": false,
+        "text": "<p>Vi erbjuder allt Ni behöver i sten för att förverkliga Era visioner. Från natursten till betongplattor, hos oss hittar Ni allt Ni behöver för att skapa en perfekt uteplats, trädgård eller gångväg. Vi garanterar att all sten vi säljer är av högsta kvalitet. Vi erbjuder konkurrenskraftiga priser på alla våra produkter.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "standard",
+        "color_bg": "",
+        "color_text": ""
+      }
+    },
+    "gallery": {
+      "type": "gallery",
+      "blocks": {
+        "1601554848772-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gatsten_bodafors_uppfart_-_forminskad.jpg",
+            "video": "",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "enlarge_image": false,
+            "subheading": "",
+            "title": "Gatsten",
+            "heading_h1": false,
+            "button_label": "Köp här",
+            "link": "shopify:\/\/collections\/gatsten",
+            "text_alignment": "position--left position--bottom"
+          }
+        },
+        "1601560664254": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bekladnadssten_G603_Uddevalla_3_-_forminskad.jpg",
+            "video": "",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "enlarge_image": true,
+            "subheading": "",
+            "title": "Murar",
+            "heading_h1": false,
+            "button_label": "Köp här",
+            "link": "shopify:\/\/collections\/murar",
+            "text_alignment": "position--left position--bottom"
+          }
+        },
+        "1601554848772-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Granithallar-MB01_1_-forminskad.jpg",
+            "video": "",
+            "desktop_image_position": "center center",
+            "mobile_image_position": "center center",
+            "enlarge_image": true,
+            "subheading": "",
+            "title": "Granithällar",
+            "heading_h1": false,
+            "button_label": "Köp här",
+            "link": "shopify:\/\/collections\/granithallar",
+            "text_alignment": "position--left position--bottom"
+          }
+        }
+      },
+      "block_order": [
+        "1601554848772-0",
+        "1601560664254",
+        "1601554848772-1"
+      ],
+      "settings": {
+        "title": "",
+        "grid": 2,
+        "desktop_image_height": 400,
+        "mobile_image_height": 400,
+        "title_size": 40,
+        "enable_margin": true,
+        "full_width": true,
+        "enable_carousel": true,
+        "overlay_style_tint": true,
+        "alternate_bg_color": false
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "1648220659c91ed362-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "dekorsten",
+            "image": "shopify:\/\/shop_images\/joey-genovese-ktd2fT6R-QM-unspla.jpg"
+          }
+        },
+        "86fa4587-d8bb-4f48-8e08-6f30c2dc7429": {
+          "type": "collection",
+          "settings": {
+            "collection": "fast-fog",
+            "image": "shopify:\/\/shop_images\/bas-van-den-eijkhof-tSqVUSzg0Ec-unsplash.jpg"
+          }
+        },
+        "1648220659c91ed362-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "gatsten",
+            "image": "shopify:\/\/shop_images\/stock-photo-granite-cobblestoned-pavement-background-full-frame-of-regular-square-cobbles-in-rows-natural-98308244.jpg"
+          }
+        },
+        "1648220659c91ed362-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "granithallar",
+            "image": "shopify:\/\/shop_images\/bas-van-den-eijkhof-tSqVUSzg0Ec-unsplash.jpg"
+          }
+        },
+        "1648220659c91ed362-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "kantsten",
+            "image": "shopify:\/\/shop_images\/backyard-garden-2022-03-04-02-36-55-utc.jpg"
+          }
+        },
+        "b0ea7788-a716-4f2f-90e1-80a8f7b9724c": {
+          "type": "collection",
+          "settings": {
+            "collection": "plattor",
+            "image": "shopify:\/\/shop_images\/sven-9Vm02xuGObI-unsplash_1.jpg"
+          }
+        },
+        "1648220659c91ed362-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "murar",
+            "image": "shopify:\/\/shop_images\/kilyan-sockalingum-ylfPrwq33vk-unsplash.jpg"
+          }
+        },
+        "6af3ddd6-cf97-4c05-ae40-84fa8ce87b8c": {
+          "type": "collection",
+          "settings": {
+            "collection": "stolpar"
+          }
+        },
+        "bc053658-4828-4d80-8f62-055e862f9cca": {
+          "type": "collection",
+          "settings": {
+            "collection": "trappor",
+            "image": "shopify:\/\/shop_images\/gardener-working-in-a-garden-2021-08-27-09-27-07-utc_50.jpg"
+          }
+        },
+        "9f20ca81-1d38-41df-a325-35e528cabc9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "verktyg-ovrigt"
+          }
+        }
+      },
+      "block_order": [
+        "1648220659c91ed362-0",
+        "86fa4587-d8bb-4f48-8e08-6f30c2dc7429",
+        "1648220659c91ed362-1",
+        "1648220659c91ed362-2",
+        "1648220659c91ed362-4",
+        "b0ea7788-a716-4f2f-90e1-80a8f7b9724c",
+        "1648220659c91ed362-3",
+        "6af3ddd6-cf97-4c05-ae40-84fa8ce87b8c",
+        "bc053658-4828-4d80-8f62-055e862f9cca",
+        "9f20ca81-1d38-41df-a325-35e528cabc9f"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Våra kategorier",
+        "layout": "carousel",
+        "grid": 4,
+        "grid_mobile": "2",
+        "show_view_all": false,
+        "alternate_bg_color": false
+      }
+    },
+    "16492276238752f510": {
+      "type": "rich-text",
+      "settings": {
+        "subheading": "Snabbt och smidigt",
+        "title": "Leverans direkt till ytterdörren",
+        "title_size": 40,
+        "heading_h1": false,
+        "text": "<p>Stengrossen strävar efter att erbjuda en bekymmersfri<strong> <\/strong>leveransupplevelse för alla våra kunder. <\/p><p>Vi använder kranbilar för att leverera Era stenprodukter direkt till Er fastighet. Ni behöver inte vara hemma vid leverans. Vi placerar Era produkter på Er tomt enligt Era  instruktioner. Vid<br\/>mindre leveranser lossar vi med bakgavellift. För mer information om leverans<br\/>från Stengrossen, besök vår hemsida eller kontakta oss via telefon.<\/p>",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "left",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "alt",
+        "color_bg": "",
+        "color_text": ""
+      }
+    },
+    "text-columns-with-images": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1601557215944-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/tim-chapman-IilEV__FmWw-unsplash_763c0f28-7959-4bc9-bf5b-1a336f16a1a2.jpg",
+            "video": "",
+            "image_width": 700,
+            "title": "Granithällar",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "Köp här",
+            "link": ""
+          }
+        },
+        "1601557215944-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/ivan-tejero--PK_aIb-t34-unsplash_49e45a7a-996f-4a10-b3eb-044fb2cf9845.jpg",
+            "video": "",
+            "image_width": 700,
+            "title": "Kantsten",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "Köp här",
+            "link": ""
+          }
+        },
+        "1601557215944-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/brian-patrick-tagalog-hSGCSeYip_8-unsplash.jpg",
+            "video": "",
+            "image_width": 700,
+            "title": "Dekorsten",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "button_label": "Köp här",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1601557215944-2",
+        "1601557215944-0",
+        "1601557215944-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Tre av våra favoriter",
+        "text_alignment": "center",
+        "button_style": "secondary",
+        "media_shape": "natural",
+        "alternate_bg_color": true,
+        "full_width": false
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "campaign": false,
+        "campaign_text": "Spring Campaign",
+        "campaign_link": "",
+        "campaign_color_1": "#e35359",
+        "title": "Granithällar",
+        "collection": "granithallar",
+        "layout": "carousel",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true,
+        "show_alternative_pricing": true,
+        "show_alternative_pricing_over_price": true
+      }
+    },
+    "background-video": {
+      "type": "background-video",
+      "settings": {
+        "video": "https:\/\/cdn.shopify.com\/s\/files\/1\/0579\/8989\/0187\/files\/aerial-top-view-on-country-road-in-forest-2022-03-10-06-13-07-utc_Trim_Trim.mp4?v=1650974715",
+        "subheading": "",
+        "title": "Sveriges smidigaste stenleverantör",
+        "title_size": 66,
+        "heading_h1": false,
+        "text": "<p>I våran webbshop säljer vi alla våra produkter utan onödiga mellanhänder vilket gör att vi kan hålla låga priser utan att göra avkall på kvalité. Vi vågar påstå att våra priser är lägst i Sverige!<\/p><p><\/p><p>Klicka enkelt hem en mängd olika stenprodukter och skapa din drömträdgård.<\/p>",
+        "enlarge_text": false,
+        "button_label": "",
+        "button_link": "",
+        "overlay_position": "position--left position--bottom",
+        "height": "fixed",
+        "height_desktop": 620,
+        "height_mobile": 500,
+        "full_width": true,
+        "overlay_style_tint": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "1601538737164-0": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "title": "Roland Hennings, Kungälv",
+            "text": "<p><em>Jag har använt Stengrossen vid ett flertal tillfällen för att köpa stenprodukter till mitt hus. Kvalitén har varit väldigt bra och priserna oslagbara. Jag kan varmt rekommendera att köpa era produkter hos stengrossen.se.<\/em><\/p>",
+            "button_label": "",
+            "link": "",
+            "image1_caption": "",
+            "image2_caption": "",
+            "layout": "left"
+          }
+        },
+        "1601538737164-1": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "title": "Michael Lindell, Motala",
+            "text": "<p><em>Stengrossen levererade Granitplattor, Gatsten och Granitstolpar hem till mig. Priserna var riktigt bra, men det bästa var hemleveransen. Chauffören lossade själv med truck och jag behövde inte vara hemma...<\/em><\/p>",
+            "button_label": "",
+            "link": "",
+            "image1_caption": "",
+            "image2_caption": "",
+            "layout": "right"
+          }
+        }
+      },
+      "block_order": [
+        "1601538737164-0",
+        "1601538737164-1"
+      ],
+      "settings": {
+        "title": "",
+        "button_style": "secondary",
+        "alternate_bg_color": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured_collection_a8NFq9",
+    "rich-text",
+    "9d2761dd-28f9-4c8d-acfa-40d0b1c9e3b1",
+    "619afd01-b951-4ed7-86a2-af1f715b0067",
+    "gallery",
+    "collection-list",
+    "16492276238752f510",
+    "text-columns-with-images",
+    "featured-collection",
+    "background-video",
+    "testimonials"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "ecommerce_logo": true,
+        "cart_show_title": true,
+        "cart_backbg": "#f5f5f5",
+        "cart_terms_show": false,
+        "cart_terms_page": "",
+        "continue_shopping_page": "https:\/\/stengrossen.se\/",
+        "cart_note_show": false,
+        "show_tax_and_shipping": true,
+        "show_additional_checkout_buttons": true,
+        "show_backorder_text": true,
+        "show_alternative_pricing": true,
+        "show_alternative_pricing_over_price": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

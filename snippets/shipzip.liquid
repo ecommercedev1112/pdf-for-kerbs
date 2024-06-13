@@ -1,0 +1,246 @@
+{% assign productTags = product.tags | join: ', ' %}
+ <br/>
+  
+  <div class="Panel">
+    <div class="policy-modal">
+      <h4 class="Panel__Title Heading u-h2"><b>{{ settings.ship_title }}</b></h4>
+      <a href="#demo-modal" class="material-icons ">i</a>
+      <div id="demo-modal" class="modal">
+        <div class="modal__content ">
+            {{ section.settings.freight_text }}
+          <a href="#" class="modal__close">×</a>
+        </div>
+      </div>    
+    </div>
+  <div class="Panel__Content">
+    <div class="ShippingEstimator"> 
+      <div id="cs_shipping_rate">
+        <div  class="form">
+          {% if template contains 'product' %}
+          {% assign v = product.selected_or_first_available_variant %}
+          
+          <input type="hidden" name="product_id" value="{{ product.id }}" />
+          
+          <input type="hidden" name="variant_id" value="{{ v.id }}"  />
+          <input type="hidden" name="sku" value="{{ v.sku }}" />
+          <input type="hidden" name="type" value="{{ product.type }}" />
+          <input type="hidden" name="tag" value="{{ product.tags | join: ',' }}" />
+          <input type="hidden" name="name" value="{{ product.title }}" />
+          
+          <input type="hidden" name="qty" value="{{ v.inventory_quantity }}" />
+          <input type="hidden" name="grams" value="{{ v.weight }}" class="productWeight" />
+          <input type="hidden" name="price" value="{{ v.price }}" />
+            <input type="hidden" name="vendor" value="{{ product.vendor }}" />
+          {% elsif template contains 'cart' %}
+         
+          {%- for product in cart.items -%} 
+     
+          <input type="hidden" name="product_id" value="{{ product.product.id }}" class="item_pid_{{ forloop.index }}" />
+          
+          <input type="hidden" name="variant_id" value="{{ product.id }}" class="item_vid_{{ forloop.index }}" />
+          <input type="hidden" name="sku" value="{{ product.sku }}" class="item_sku_{{ forloop.index }}" />
+          <input type="hidden" name="type" value="{{ product.product.type }}" class="item_type_{{ forloop.index }}" />
+          <input type="hidden" name="tag" value="{{ product.product.tags | join: ',' }}" class="item_tag_{{ forloop.index }}" />
+          <input type="hidden" name="name" value="{{ product.title }}" class="item_name_{{ forloop.index }}" />
+
+          <input type="hidden" name="qty" value="{{ product.quantity }}" class="item_qty_{{ forloop.index }}" />
+          <input type="hidden" name="grams" value="{{ product.grams }}" class="item_weight_{{ forloop.index }}"  />
+          <input type="hidden" name="price" value="{{ product.price }}" class="item_price_{{ forloop.index }}" />
+          <input type="hidden" name="vendor" value="{{ product.vendor }}" class="item_vendor_{{ forloop.index }}" />
+          {% endfor %}
+          {% endif %}
+             <div class="ShippingEstimator__Form" style="padding-bottom:10px;">
+              <input id="input_postcode" type="text" class="input form-element Form__Input quantity__input" name="postal_code" placeholder="{{ settings.ship_placeholder }}">
+  
+              <button id="search_postcode" type="button" class=" btn button Button button button--full-width button--secondary">{{ settings.ship_btn }}</button>
+            </div>
+
+          <div class="ShippingEstimator__Error" style="display: none"></div>
+          <div id="shipping_rates"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{ 'api.jquery.js' | shopify_asset_url | script_tag }}
+<style>
+  
+</style>
+<script>
+  $(document).ready(function () {
+ 
+    var wmf = "{{ shop.money_format }}";
+
+   
+    $("#search_postcode").on("click", function (e) {
+	 $('.ShippingEstimator__Error').hide();
+      e.preventDefault();
+      var form = $(this).closest('.form');
+      var form2 = $(this).closest('.product-form--regular');
+      var destinations = {};
+      var rate = [];
+      var temp = {};
+      var pc = form.find('[name="postal_code"]').val();
+      var destination = {};
+      destination["postal_code"] = pc;
+      destination["province"] = "";
+      destination["country"] = "";
+      destinations["destination"] = destination;
+      temp = destinations;  
+      var items = [];
+
+      {% if template contains 'product' %}
+      var item = {};
+      item["quantity"] = form2.find('[name="qty"]').val();
+      item["grams"] = form.find('[name="grams"]').val();
+      item["price"] = form.find('[name="price"]').val();
+      item["vendor"] = form.find('[name="vendor"]').val();
+      item["product_id"] = form.find('[name="product_id"]').val();
+      item["variant_id"] = form.find('[name="variant_id"]').val();
+      item["sku"] = form.find('[name="sku"]').val();
+      item["type"] = form.find('[name="type"]').val();
+      item["tag"] = form.find('[name="tag"]').val();
+      item["name"] = form.find('[name="name"]').val();
+      items.push(item);
+      {% elsif template contains 'cart' %}
+        {%- for product in cart.items -%}
+        var item = {};
+        item["quantity"] = form.find('.item_qty_{{ forloop.index }}').val();
+        item["grams"] = form.find('.item_weight_{{ forloop.index }}').val();
+        item["price"] = form.find('.item_price_{{ forloop.index }}').val();
+        item["vendor"] = form.find('.item_vendor_{{ forloop.index }}').val();
+        item["product_id"] = form.find('.item_pid_{{ forloop.index }}').val();
+        item["variant_id"] = form.find('.item_vid_{{ forloop.index }}').val();
+        item["sku"] = form.find('.item_sku_{{ forloop.index }}').val();
+        item["type"] = form.find('.item_type_{{ forloop.index }}').val();
+        item["tag"] = form.find('.item_tag_{{ forloop.index }}').val();
+        item["name"] = form.find('.item_name_{{ forloop.index }}').val();
+        items.push(item);
+        {% endfor %}
+      {% endif %}
+  
+      temp["items"] = items;
+      var shop = Shopify.shop;
+      rate = temp;
+      var html =''; 
+
+       var t =  /^\d+$/.test(pc); 
+        if(pc.length != 5 || t==false) {
+        $('.ShippingEstimator__Error').html('{{ settings.ship_err }}').show();
+        return false;
+       } 
+      $.ajax({
+        url: "https://sbz.cirkleinc.com/front-widget",
+        data: {rate,shop},
+        dataType:'JSON',
+        crossDomain: true,
+        type: "post",
+        success: function (srates) {
+          if($('#input_postcode').val() == ""){
+            $('.ShippingEstimator__Error').html('{{ settings.ship_err_req }}').show();
+          }else{
+            if(typeof srates.rates == 'undefined') {
+              $('.ShippingEstimator__Error').html('').show();
+              return false;
+            }
+            if(srates.rates.length <= 0){
+              if($('#input_postcode').val() == ""){
+                $('.ShippingEstimator__Error').html('{{ settings.ship_err }}').show();
+              }else{
+                $('.ShippingEstimator__Error').html('{{ settings.ship_err }}').show();
+              }
+             
+            }else{
+              html += '<ul>';
+              $(srates.rates).each(function(index,val) {
+                $('.ShippingEstimator__Error').hide();
+                html += '<li><span>'+val.service_name +' =  ' +Shopify.formatMoney(val.total_price,wmf)+'</span><br/><span class="shipdesc">'+val.description+'</span></li>' 
+              });
+              html += '</ul>'
+              $('#shipping_rates').html(html).show();
+            }
+          }
+        },
+      });
+    });
+  });
+</script>
+
+<style>
+  .flexBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ShippingEstimator__Form {
+    display: flex;
+  }
+  .Panel {
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    text-align: left;
+  }
+  div#shopify-section-pr_description {
+    padding-top: 0;
+    margin-top: 10px !important;
+  }
+  #shipping_rates li span{
+    font-size: 16px;
+    color: #000;
+    width: 100%;
+    line-height: 14px;
+    display: inline;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  #shipping_rates li span.shipdesc {
+    color: #555;
+    font-size: 13px;
+  }
+  #shipping_rates b {
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+  }
+  #shipping_rates li {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+  }
+  #shipping_rates ::marker{
+    content:none;
+  }
+  #cs_shipping_rate  .ShippingEstimator__Error {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ff0000;
+  }
+  #cs_shipping_rate  .ShippingEstimator__Error a {
+    text-decoration: underline;
+  }
+  #input_postcode {
+    vertical-align: middle;
+        border: 1px solid;
+  }
+div#shipping_rates ul {
+    padding: 0;
+}
+  @media(max-width:767px) {
+    .flexBox {
+      display: block;
+    }
+    button.btn_checkout {
+      margin-top: 10px !important;
+    }
+  }
+</style>
+ 

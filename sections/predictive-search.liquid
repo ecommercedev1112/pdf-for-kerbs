@@ -1,0 +1,80 @@
+{%- if predictive_search.performed -%}
+  <div id="predictive-search-results">
+    {%- if predictive_search.resources.products.size > 0 -%}
+      <div class="collection">
+        <span class="predictive-search-products" style="font-weight: 600;">
+          kategori
+        </span>
+        {% assign collection_array = '' | split: ',' %}
+        {% assign collection_list = '' %}
+        <ul role="listbox" aria-labelledby="predictive-search-products" class="search-list">
+          {% comment %} {%- for product in predictive_search.resources.products -%}
+            {%- for collection in product.collections -%}
+              {% assign collection_list = collection_list | append: ',' | append: collection.title %}
+            {%- endfor -%}
+          {%- endfor -%}
+
+          {% assign collection_list = collection_list | remove_first: ',' | split: ',' %}
+          {% assign collection_array = collection_array | concat: collection_list %}
+          {% assign unique_array = collection_array | uniq %}
+
+          {%- for item in unique_array -%}
+            {%- if item == "Best selling products" or item == "New products"-%}
+              <li role="option" class="hidden">
+              {{ item }} 
+              </li>
+            {% else %}
+              <li role="option">
+                {{ item }} 
+              </li>
+            {%- endif -%}
+          {%- endfor -%} {% endcomment %}
+
+          {%- for collection in collections -%}
+            {%- if collection.title != "Best selling products" and collection.title != "New products"-%}
+            <li role="option" data-handle="{{ collection.title }}"  class="predictive-collection hidden">
+              <a href="{{ collection.url }}">
+                {{ collection.title }} 
+              </a>
+            </li>
+            {%- endif -%}
+          {%- endfor -%}
+
+        </ul>
+      </div>
+
+      <div class="product">
+        <span class="predictive-search-products" style="font-weight: 600;">
+          produketer
+        </span>
+        <ul role="listbox" aria-labelledby="predictive-search-products" class="search-list">
+          {%- for product in predictive_search.resources.products -%}
+            <li role="option">
+              <a href="{{ product.url }}">
+                  <div class=product-title>
+                      {{ product | image_url: width: 50 | image_tag }}
+                      <span>{{ product.title }}</span>
+                  </div>
+                  {% if product.tags contains 'campaign' %}
+                    <span class="price" >{{ product.price | money }}</span>
+                  {% else %}
+                    <span class="price" style="color: #111;">{{ product.price | money }}</span>
+                  {% endif %}
+                  
+              </a>
+            </li>
+            {%- assign length = forloop.length -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+    <button class="show-key search-btn button">
+      {%- if predictive_search.resources.products.size > 0 -%}
+        <span> se alla produketer... ({{ search.results_count }})</span>
+      {% else %}
+        <span> se alla produketer... (0)</span>
+      {%- endif -%}
+
+    </button>
+  </div>
+{%- endif -%}
